@@ -1,12 +1,15 @@
-name: Hello GitHub Actions
+#https://www.youtube.com/watch?v=W_Fhjmsq7hU
 
+name: Hello GitHub Actions
+ 
 on:
     push:
         branches: ["*"]
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-latest  # Máquina em que está rodando
+       # Linux *1 Windows *2 Mac *10 Multiplicadores 2 mil minutos é mais comun rodar em linux
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-node@v1
@@ -16,3 +19,5 @@ jobs:
             - run: npm run test
             - run: npm run build
             - run: npm run deploy
+
+
